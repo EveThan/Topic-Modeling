@@ -74,7 +74,7 @@ Change "documents.csv" in the code cell above to the file name of your dataset. 
 - matplotlib
 - seaborn
 
-## Approach
+## Approaches
 In order to reduce the size of the dataset, only the top 4000 most frequently occurred words are kept. To implement the LSA or Latent Semantic Analysis model, TF-IDF (term frequency-inverse document frequency) scores are computed where and stored in a matrix. The TF-IDF score of a word is high when it occurs frequently in a document but infrequently across the corpus or all documents. Therefore, compared to Count Vectorizer which simply keeps track of the occurrence of a word in a document, TF-IDF Vectorizer also keeps track of the 'exclusivity' of a given word. The resulting TF-IDF matrix will have documents as its rows and words as its columns. Each entry of the matrix will be the TF-IDF score that each word has for each document. 
 
 Then, SVD or singular value decomposition is applied on the TF-IDF matrix computed. SVD will receive a matrix with documents as rows and words as columns, and produce 3 outputs. The 2 output matrices that we need are U and V. U will have documents as its rows and topics as its columns while V transposed will have topics as its rows and words as its columns. n_components is set to 10 when implementing TruncatedSVD so that the output matrices U and V will have 10 topics.
