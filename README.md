@@ -113,3 +113,5 @@ https://towardsdatascience.com/topic-modeling-and-latent-dirichlet-allocation-in
 http://blog.echen.me/2011/08/22/introduction-to-latent-dirichlet-allocation/
 - LDA Topic Models <br>
 https://www.youtube.com/watch?v=3mHy4OSyRf0
+
+~ Project created in July 2021 ~
