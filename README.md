@@ -29,7 +29,7 @@ If you hover over a topic (a circle with a number in it on the left side of the 
 - To compare the performances of LSA and LDA in topic modeling. 
 
 ## Dataset
-The RACE dataset is a large-scale reading comprehension dataset with more than 28,000 passages and nearly 100,000 questions. The dataset is collected from English examinations in China, which are designed for middle school and high school students. The dataset can be downloaded from <a href="https://www.cs.cmu.edu/~glai1/data/race/" target="_blank">here</a>.
+The RACE dataset is a large-scale reading comprehension dataset with more than 28,000 passages and nearly 100,000 questions. The dataset is collected from English examinations in China, which are designed for middle school and high school students. The dataset can be downloaded from <a href="https://www.cs.cmu.edu/~glai1/data/race/" target="_blank">here</a>. The dataset is too large to be uploaded to GitHub. 
 
 ## Code, files, or folders needed to run the program
 - <a href="https://github.com/ZhengEnThan/Topic-Modeling/blob/main/Topic_Modeling_with_LSA_and_LDA.ipynb" target="_blank">Topic_Modeling_with_LSA_and_LDA.ipynb</a>
@@ -38,7 +38,7 @@ The RACE dataset is a large-scale reading comprehension dataset with more than 2
 ## How to use the program
 Simply run the program cell by cell to import the library, load the data, process and inspect the data, and then apply topic modeling using LSA as well as LDA on the data. 
 
-There are comments in each code cell that tell you what the code cell does and the code cells are also grouped under different markdowns that specify what the code cells do.
+There are comments in each code cell that tell you what the code does and the code cells are also grouped under different markdowns that specify what the group of code cells do.
 
 If you want to use another dataset, edit the code cell directly below the markdown "Getting the data".
 
@@ -50,3 +50,30 @@ print(documents.head())
 ```
 
 Change "documents.csv" in the code cell above to the file name of your dataset. Make sure that your dataset is such that there is only 1 column where each entry is a passage. If your dataset is not in the csv format, you would have to change the function pd.read_csv() as well. 
+
+## What I have learned 
+- Used nltk to remove stopwords, tokenize, and lemmatize the passages in the dataset.
+- Used modules from sklearn.feature_extraction.text such as CountVectorizer and functions from numpy such as argsort() and flip() to inspect the properties of the dataset such as finding the top n words that occur the most in a given text.
+- Used TextBlob from textblob to compute the frequency of each word type such as noun and adjective in a given text. 
+- Used the TfidfVectorizer class from sklearn.feature_extraction.text to convert a collection of raw documents to a matrix of TF-IDF features and TruncatedSVD from sklearn.decomposition to do dimensionality reduction using truncated SVD. Computing a TF-IDF matrix and performing SVD on it are done in order to implement the LSA topic modeling technique.
+- Used TSNE from sklearn.manifold to visualize high-dimensional data in 2D.
+- Used WordCloud from wordcloud to display word clouds of a given text where the bigger a word is, the more frequently it appears in the text.
+- Used LatentDirichletAllocation and RandomizedSearchCV to implement the LDA topic modeling technique and find the best parameters for the LDA model.
+- Used bokeh and pyLDAvis to interactively display the plots such as the t-SNE cluster plots and plots that interpret the 'distance' between each topic and the words that most frequently appear in each topic.
+
+## Main libraries or modules used
+- numpy
+- pandas
+- nltk
+- textblob
+- collections
+- sklearn
+- wordcloud
+- bokeh
+- pyLDAvis
+- matplotlib
+- seaborn
+
+
+
+
